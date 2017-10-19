@@ -1,0 +1,40 @@
+name: Freshdesk
+version: 1.0.0
+description: Adds a form action to create a Freshdesk ticket
+icon: headphones
+author:
+  name: Benoît Rouleau
+  email: benoit.rouleau@icloud.com
+homepage: https://github.com/benface/grav-plugin-freshdesk
+keywords: grav, plugin, freshdesk
+bugs: https://github.com/benface/grav-plugin-freshdesk/issues
+docs: https://github.com/benface/grav-plugin-freshdesk/blob/master/README.md
+license: MIT
+
+dependencies:
+  - { name: form, version: '~2.0' }
+
+form:
+  validation: loose
+  fields:
+
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
+    api_key:
+      type: text
+      label: Freshdesk API Key
+
+    domain:
+      type: text
+      label: Freshdesk Subdomain
+      help: The subdomain part of your Freshdesk URL (e.g. if your URL is `https://mysite.freshdesk.com`, then enter `mysite`)
+      

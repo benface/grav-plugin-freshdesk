@@ -1,0 +1,5 @@
+{
+    "require": {
+        "mpclarkson/freshdesk-php-sdk": "dev-master"
+    }
+}
