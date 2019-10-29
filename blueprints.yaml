@@ -12,7 +12,7 @@ docs: https://github.com/benface/grav-plugin-freshdesk/blob/master/README.md
 license: MIT
 
 dependencies:
-  - { name: form, version: '~2.0' }
+  - { name: form, version: '~4.0' }
 
 form:
   validation: loose
